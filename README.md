@@ -14,6 +14,7 @@
 |git log				|Zeigt alle commits|
 |git remote add origin [github addresse]|verbindet das lokale repository mit gibhub|
 |git push -u origin master		|origin ist der remote name und master der branch name|
+|git pull origin master |holt den aktuellen master|
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git tag				|zeigt alle vorhandenen Tags|
 
