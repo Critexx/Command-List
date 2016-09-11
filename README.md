@@ -7,6 +7,7 @@
 |git status				|zeigt aktuellen Status an|
 |git add [dateiname]			|added eine veränderte oder neue Datei|
 |git add * oder .			|added alle veränderten oder neuen Dateien|
+|git add -u			|added alle deleted files|
 |git reset HEAD [dateiname]		|macht "add" wieder rückgänging|
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
@@ -26,7 +27,7 @@
 * git push -u origin master
 
 ***
-### Reihenfolge bei einem neuen Projekt:
+### Neuen Projekt erstellen:
 
 * Repository auf Github erzeugen
 * .gitignore dateien im lokalen Ordner packen
