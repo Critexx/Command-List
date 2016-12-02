@@ -18,6 +18,7 @@
 |git pull origin master |holt den aktuellen master|
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git push origin v1.0 |pusht den Tag zum Server|
+|git diff HEAD |zeigt Änderung der letzten commits an|
 |git tag				|zeigt alle vorhandenen Tags|
 
 ***
