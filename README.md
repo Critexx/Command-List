@@ -8,7 +8,7 @@
 |git add [dateiname]			|added eine veränderte oder neue Datei|
 |git add * oder .			|added alle veränderten oder neuen Dateien|
 |git add -u			|added alle deleted files|
-|git reset HEAD [dateiname]		|macht "add" wieder rückgänging|
+|git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
 |git clone "addresse"			|Holt eine Kopie des Repositorys|
@@ -19,6 +19,7 @@
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git push origin v1.0 |pusht den Tag zum Server|
 |git diff HEAD |zeigt Änderung der letzten commits an|
+|git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
 
 ***
