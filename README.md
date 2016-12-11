@@ -11,6 +11,7 @@
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
+|git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
 |git clone "addresse"			|Holt eine Kopie des Repositorys|
 |git log				|Zeigt alle commits|
 |git remote add origin [github addresse]|verbindet das lokale repository mit gibhub|
