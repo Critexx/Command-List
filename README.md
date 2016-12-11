@@ -3,6 +3,8 @@
 |--------|------------|
 |pwd					|aktueller Directory|
 |cd "C:\Users\Critex\Documents\"	|Directory ändern|
+|git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen|
+|git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen|
 |git init				|initialisiert ein lokales Repository. Erzeugt .git Datei|
 |git status				|zeigt aktuellen Status an|
 |git add [dateiname]			|added eine veränderte oder neue Datei|
