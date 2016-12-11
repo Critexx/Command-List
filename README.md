@@ -25,6 +25,9 @@
 |git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
 
+### Git Command References:
+https://git-scm.com/docs
+
 ***
 ### Neues File hinzufügen:
 * git add log.txt
