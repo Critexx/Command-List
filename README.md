@@ -9,6 +9,8 @@
 |git status				|zeigt aktuellen Status an|
 |git add [dateiname]			|added eine veränderte oder neue Datei|
 |git add --all oder * oder .			|added alle veränderten oder neuen Dateien|
+|git add docs/\*.txt			|added alle txt-files im "docs" Ordner|
+|git add docs/						|added alle files im "docs" Ordner|
 |git add -u			|added alle deleted files|
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
 |git rm "\*.txt"		|removed alle txt-files auf der harddisk, sowie im stage|
