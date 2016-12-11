@@ -26,6 +26,7 @@
 |git remote -v  |Zeigt alle remote repositories an|
 |git remote rm originFoo  |Löscht den remote Eintrag "originFoo"|
 |git push -u origin master		|origin ist der remote name und master der branch name|
+|git push		|wenn man einmal den befehl mit -u gemacht hat, merkt sich git die Einstellung und es reicht "git push" einzugeben|
 |git pull origin master |holt den aktuellen master|
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git push origin v1.0 |pusht den Tag zum Server|
