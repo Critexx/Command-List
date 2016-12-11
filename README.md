@@ -27,11 +27,11 @@
 |git pull origin master |holt den aktuellen master|
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git push origin v1.0 |pusht den Tag zum Server|
-|git diff HEAD |zeigt Änderung der letzten commits an|
+|git diff HEAD |zeigt Änderung der letzten commits an (HEAD ist die Referenz der letzten Änderung auf der Time-Line, in der man sich befindet|
 |git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
 
-### Git Command References:
+### Git Command Referenzen:
 https://git-scm.com/docs
 
 ***
