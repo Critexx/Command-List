@@ -13,7 +13,9 @@
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
 |git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
+|git branch -d featureFoo                  |Löscht den branch "featureFoo"|
 |git checkout featureFoo                |Wechselt den Zeiger (Kopf bzw HEAD) auf den Branch "featureFoo"|
+|git merge featureFoo                |Wenn man auf dem Master ist, führt dieser Befehl dazu, dass "featureFoo" ins Master gemerged wird|
 |git clone "addresse"			|Holt eine Kopie des Repositorys|
 |git log				|Zeigt alle commits|
 |git remote add origin [github addresse]|verbindet das lokale repository mit gibhub|
