@@ -9,9 +9,11 @@
 |git add * oder .			|added alle veränderten oder neuen Dateien|
 |git add -u			|added alle deleted files|
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
+|git rm "\*.txt"		|removed alle txt-files auf der harddisk, sowie im stage|
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
 |git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
+|git checkout featureFoo                |Wechselt den Zeiger (Kopf bzw HEAD) auf den Branch "featureFoo"|
 |git clone "addresse"			|Holt eine Kopie des Repositorys|
 |git log				|Zeigt alle commits|
 |git remote add origin [github addresse]|verbindet das lokale repository mit gibhub|
