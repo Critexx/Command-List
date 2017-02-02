@@ -26,6 +26,7 @@
 |git log				|Zeigt alle commits|
 |git remote add origin [github addresse]|verbindet das lokale repository mit gibhub. Im Prinzip ist das nichts anderes als ein Link-Bookmark|
 |git remote -v  |Zeigt alle remote repositories an|
+|git remote update  |Holt alle remote branches auf das Local system|
 |git remote rm originFoo  |Löscht den remote Eintrag "originFoo"|
 |git push -u origin master		|origin ist der remote name und master der branch name|
 |git push		|wenn man einmal den befehl mit -u gemacht hat, merkt sich git die Einstellung und es reicht "git push" einzugeben|
