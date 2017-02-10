@@ -20,6 +20,7 @@
 |git branch                             |zeigt alle branches an|
 |git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
 |git branch -d featureFoo                  |Löscht den branch "featureFoo"|
+|git push origin --delete featureFoo       |Löscht den branch "featureFoo" auf dem remote repository|
 |git checkout -t origin/branch-name         |Holt den Branch aus dem remote repository|
 |git checkout featureFoo                |Wechselt den Zeiger (Kopf bzw HEAD) auf den Branch "featureFoo"|
 |git merge featureFoo                |Dieser Befehl wirkt sich immer auf den Branch aus, auf dem man den HEAD hat. Wenn mann auf den Master sitzt und diesen Befehl ausführt, wird alles was im featureFoo ist, ins Master gemerged|
