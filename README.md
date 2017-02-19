@@ -43,10 +43,8 @@
 https://git-scm.com/docs
 
 ***
-### Neues File hinzufügen:
-* git add log.txt
-* git commit -m "log.txt hinzugefügt"
-* git push -u origin master
+### Bereits existierendes Projekt zum ersten Mal lokal herunterladen:
+* git clone [Remote Adresse]
 
 ***
 ### Neuen Projekt erstellen:
@@ -58,4 +56,10 @@ https://git-scm.com/docs
 * git add *
 * git commit -m "Initial commit"
 * git remote add origin [github addresse]		-------> Muss man nur einmal machen
+* git push -u origin master
+
+***
+### Neues File hinzufügen:
+* git add foo.txt
+* git commit -m "foo.txt hinzugefügt"
 * git push -u origin master
