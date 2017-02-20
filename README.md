@@ -63,3 +63,12 @@ https://git-scm.com/docs
 * git add foo.txt
 * git commit -m "foo.txt hinzugefügt"
 * git push -u origin master
+
+***
+### Merging im gleichen Branch:
+Bei folgender Message: "Please enter a commit message to explain why this merge is necessary,especially if it merges an updated upstream into a topic branch"
+* press "i"
+* write your merge message
+* press "esc"
+* write ":wq" (w=write q=quit)
+* then press enter
