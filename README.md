@@ -15,6 +15,7 @@
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
 |git reset --hard		|setzt den aktuellen branch wieder auf den letzten commit (löscht alle Änderungen|
 |git clean -f		|löscht alle untracked files|
+|git checkout -- \*		|setzt den Branch wieder zurück auf den letzten Commit|
 |git rm "\*.txt"		|removed alle txt-files auf der harddisk, sowie im stage|
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
