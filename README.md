@@ -39,6 +39,7 @@
 |git diff HEAD |zeigt Änderung der letzten commits an (HEAD ist die Referenz der letzten Änderung auf der Time-Line, in der man sich befindet|
 |git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
+|git log --graph	|Visualisiert den Branchverlauf|
 
 ### Git Command Referenzen:
 https://git-scm.com/docs
