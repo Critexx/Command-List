@@ -78,6 +78,7 @@ Bei folgender Message: "Please enter a commit message to explain why this merge 
 * write ":wq" (w=write q=quit)
 * then press enter
 
+***
 ### An einem anderen Branch weiterarbeiten, während man noch offene Änderungen hat:
 * git stash
 * git checkout "newbranch"
