@@ -40,6 +40,9 @@
 |git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
 |git log --graph	|Visualisiert den Branchverlauf|
+|git stash	|Versetzt die aktuellen Änderungen in ein "Lager", um an einem anderen Zeitpunkt daran weiter zu arbeiten|
+|git stash list	|Zeigt alle "Stashes" an|
+|git stash apply	|Holt den letzten Änderungen aus dem "Lager" heraus|
 
 ### Git Command Referenzen:
 https://git-scm.com/docs
@@ -74,3 +77,11 @@ Bei folgender Message: "Please enter a commit message to explain why this merge 
 * press "esc"
 * write ":wq" (w=write q=quit)
 * then press enter
+
+### An einem anderen Branch weiterarbeiten, während man noch offene Änderungen hat:
+* git stash
+* git checkout "newbranch"
+* git add .
+* git commit -m ""
+* git checkout "oldbranch"
+* git stash apply
