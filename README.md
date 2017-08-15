@@ -33,13 +33,15 @@
 |git remote rm originFoo  |Löscht den remote Eintrag "originFoo"|
 |git push -u origin master		|origin ist der remote name und master der branch name|
 |git push		|wenn man einmal den befehl mit -u gemacht hat, merkt sich git die Einstellung und es reicht "git push" einzugeben|
-|git pull origin master |holt den aktuellen master|
+|git pull origin master |Ladet die neuste Version herunter und merged sie automatisch mit dem lokalen Projekt|
+|git fetch (origin) |Ladet alle neuen Dateien herunter. Änderungen von bestehenden Daten werden nicht gemerged.|
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git push origin v1.0 |pusht den Tag zum Server|
 |git diff HEAD |zeigt Änderung der letzten commits an (HEAD ist die Referenz der letzten Änderung auf der Time-Line, in der man sich befindet|
 |git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
 |git log --graph	|Visualisiert den Branchverlauf|
+|git --version	|Zeigt die aktuelle Git-Version an|
 |git stash	|Versetzt die aktuellen Änderungen in ein "Lager", um an einem anderen Zeitpunkt daran weiter zu arbeiten|
 |git stash list	|Zeigt alle "Stashes" an|
 |git stash apply	|Holt den letzten Änderungen aus dem "Lager" heraus|
