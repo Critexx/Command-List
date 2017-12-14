@@ -46,6 +46,7 @@
 |git stash	|Versetzt die aktuellen Änderungen in ein "Lager", um an einem anderen Zeitpunkt daran weiter zu arbeiten|
 |git stash list	|Zeigt alle "Stashes" an|
 |git stash apply	|Holt den letzten Änderungen aus dem "Lager" heraus|
+|git cherry-pick d42c389f	|Es wird der Commit "d42c389f" eines anderen Branchs in den aktuellen Branch eingefügt. Alle Änderungen aus früheren Commits werden **nicht** übernommen.|
 
 ### Git Command Referenzen:
 https://git-scm.com/docs
