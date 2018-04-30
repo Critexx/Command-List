@@ -39,7 +39,6 @@
 |git push -u origin master		|origin ist der remote name und master der branch name|
 |git push		|wenn man einmal den befehl mit -u gemacht hat, merkt sich git die Einstellung und es reicht "git push" einzugeben|
 |git pull origin master |Ladet die neuste Version herunter und merged sie automatisch mit dem lokalen Projekt|
-|git fetch (origin) |Ladet alle neuen Dateien herunter. Änderungen von bestehenden Daten werden nicht gemerged.|
 |git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
 |git push origin v1.0 |pusht den Tag zum Server|
 |git diff HEAD |zeigt Änderung der letzten commits an (HEAD ist die Referenz der letzten Änderung auf der Time-Line, in der man sich befindet|
