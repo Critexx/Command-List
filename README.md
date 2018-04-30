@@ -24,9 +24,11 @@
 |git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
 |git branch -d featureFoo                  |⚠️Löscht den branch "featureFoo"|
 |git push origin --delete featureFoo       |⚠️Löscht den branch "featureFoo" auf dem remote repository|
-|git checkout -t(-b) origin/branch-name         |Holt den Branch aus dem remote repository|
+|git fetch                             |Ladet alle Objects und Refs von den remote repositorys herunter|
+|git fetch origin                            |Ladet alle Objects und Refs vom "origin"-repository herunter|
+|git checkout -t origin/branch-name         |Holt den Branch aus dem remote repository. Hierfür muss aber zuerst git fetch ausgeührt werden.|
 |git checkout featureFoo                |Wechselt den Zeiger (Kopf bzw HEAD) auf den Branch "featureFoo"|
-|git checkout -b BranchFoo          |Shorthand um einen Branch zu erstellen und direkt checkout ausführen. Bsp: git branch BranchFoo; git checkout BranchFoo|
+|git checkout -b BranchFoo          |Shorthand für:<br/>git branch BranchFoo  <br/>git checkout BranchFoo|
 |git merge featureFoo                |Dieser Befehl wirkt sich immer auf den Branch aus, auf dem man den HEAD hat. Wenn mann auf den Master sitzt und diesen Befehl ausführt, wird alles was im featureFoo ist, ins Master gemerged|
 |git clone "addresse"			|Holt eine Kopie des Repositorys|
 |git log				|Zeigt alle commits|
