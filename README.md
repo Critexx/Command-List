@@ -20,9 +20,10 @@
 |git rm "\*.txt"		|removed alle txt-files auf der harddisk, sowie im stage|
 |git commit -m "commit nachricht"	|commit erzeugen|
 |git branch                             |zeigt alle branches an|
+|git branch -r                          |zeigt alle remote branches an|
 |git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
-|git branch -d featureFoo                  |Löscht den branch "featureFoo"|
-|git push origin --delete featureFoo       |Löscht den branch "featureFoo" auf dem remote repository|
+|git branch -d featureFoo                  |⚠️Löscht den branch "featureFoo"|
+|git push origin --delete featureFoo       |⚠️Löscht den branch "featureFoo" auf dem remote repository|
 |git checkout -t(-b) origin/branch-name         |Holt den Branch aus dem remote repository|
 |git checkout featureFoo                |Wechselt den Zeiger (Kopf bzw HEAD) auf den Branch "featureFoo"|
 |git merge featureFoo                |Dieser Befehl wirkt sich immer auf den Branch aus, auf dem man den HEAD hat. Wenn mann auf den Master sitzt und diesen Befehl ausführt, wird alles was im featureFoo ist, ins Master gemerged|
