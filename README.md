@@ -3,8 +3,10 @@
 |--------|------------|
 |pwd					|aktueller Directory|
 |cd "C:\Users\Critex\Documents\"	|Directory ändern|
-|git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen|
-|git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen|
+|git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen (global über alle Projekte)|
+|git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen (global über alle Projekte)|
+|git config --global --list		|Listet alle Global Konfigurationen auf|
+|git config --list		|Listet alle Konfigurationen innerhalb eines Projekts auf. Wenn man für ein bestimmtes Projekt einen andere email verwenden möchte, kann man den oberen Befehl ohne "--global" verwenden|
 |git init				|initialisiert ein lokales Repository. Erzeugt .git Datei|
 |git status				|zeigt aktuellen Status an|
 |git add [dateiname]			|added eine veränderte oder neue Datei|
