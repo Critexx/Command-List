@@ -6,6 +6,7 @@
 |cd "C:\Users\Critex\Documents\"	|Directory ändern|
 |cat ~/.ssh/id_rsa.pub		|Überprüfung ob schon ein SSH Key pair existiert|
 |ssh-keygen -t rsa -C "your.email@example.com" -b 4096					|erstellt einen neuen SSH Key nach rsa Verfahren und 4096 bit Länge|
+|ssh -T git@gitlab.com		|Überprüfung einer SSH-Verbindung auf ein gitlab repo|
 
 |git command | Description|
 |------------|------------|
