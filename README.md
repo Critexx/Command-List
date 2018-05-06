@@ -1,8 +1,14 @@
 # Command-List
-|Command | Description|
-|--------|------------|
+
+|Bash command | Description|
+|-------------|------------|
 |pwd					|aktueller Directory|
 |cd "C:\Users\Critex\Documents\"	|Directory ändern|
+|cat ~/.ssh/id_rsa.pub		|Überprüfung ob schon ein SSH Key pair existiert|
+|ssh-keygen -t rsa -C "your.email@example.com" -b 4096					|erstellt einen neuen SSH Key nach rsa Verfahren und 4096 bit Länge|
+
+|git command | Description|
+|------------|------------|
 |git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen (global über alle Projekte)|
 |git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen (global über alle Projekte)|
 |git config --global --list		|Listet alle Global Konfigurationen auf|
