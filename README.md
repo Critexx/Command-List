@@ -76,9 +76,9 @@ https://git-scm.com/docs
 * .gitignore dateien im lokalen Ordner packen
 * git init
 * echo "# test" >> README.md			----> erzeugt die README Datei mit dem Titel "test"
+* git remote add origin [github addresse]
 * git add *
 * git commit -m "Initial commit"
-* git remote add origin [github addresse]		-------> Muss man nur einmal machen
 * git push -u origin master
 
 ***
