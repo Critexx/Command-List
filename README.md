@@ -67,6 +67,13 @@
 https://git-scm.com/docs
 
 ***
+### Git Statistics
+
+git log --pretty=format:%an \
+| awk '{ ++c[$0]; } END { for(cc in c) printf "%5d %s\n",c[cc],cc; }'\
+| sort -r
+
+***
 ### Bereits existierendes Projekt zum ersten Mal lokal herunterladen:
 * git clone [Remote Adresse]
 
