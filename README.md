@@ -24,8 +24,9 @@
 |git add -u			|added alle deleted files|
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
 |git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle Änderungen)|
-|git clean -n		|Zeigt an welche Files gelöscht werden würden, wenn man "git clean -f" benutzt|
+|git clean -n	-f	|Zeigt an welche Files gelöscht werden würden, wenn man "git clean -f" benutzt|
 |git clean -f		|⚠️ löscht alle untracked files|
+|git clean -d -f	|⚠️ löscht alle untracked files in allen Subfolders|
 |git checkout -- \*		|setzt den Branch wieder zurück auf den letzten Commit|
 |git rm "\*.txt"		|removed alle txt-files auf der harddisk, sowie im stage|
 |git commit -m "commit nachricht"	|commit erzeugen|
