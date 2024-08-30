@@ -76,9 +76,19 @@
 |------------|------------|
 |git commit --amend				|Öffnet ein Editor um den Commit zu editieren|
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
-|git reset --soft		|Der Head wird auf den aktuellen Commit geschoben. Files landen somit wieder im Staging-Area und können sofort comitted werden|
+|git reset --soft		|* Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit. * dsdf|
 |git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle Änderungen)|
-|git reset --mixed		|Ist dasselbe wie wenn man nichts|
+
+**git reset --soft:**
+* Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit.
+* **Was passiert**: Die Änderungen bleiben im Staging-Bereich und im Arbeitsverzeichnis unverändert. Du kannst die Änderungen sofort erneut committen, da sie noch im Staging-Bereich sind.
+* **Verwendung**: Nützlich, wenn du einen Commit rückgängig machen möchtest, aber die Änderungen nicht verlieren willst. Du kannst sie bearbeiten und erneut committen.
+
+**git reset --mixed** (Standardverhalten von git reset ohne Optionen):
+* Dieser Befehl verschiebt ebenfalls den HEAD und den aktuellen Branch auf den angegebenen Commit.
+* **Was passiert**: Die Änderungen bleiben im Arbeitsverzeichnis erhalten, aber der Staging-Bereich (Index) wird zurückgesetzt. Das bedeutet, dass die Änderungen nicht mehr gestaged sind, aber sie sind noch in den Dateien vorhanden.
+* **Verwendung**: Nützlich, wenn du die Änderungen behalten möchtest, aber sie aus dem Staging-Bereich entfernen willst, um sie erneut zu überprüfen oder zu ändern, bevor du sie commitest.
+
 
 ### Git Command Referenzen:
 https://git-scm.com/docs
