@@ -1,6 +1,13 @@
 # Command-List
 
-|Bash command | Description|
+### Allgemeine Git Begriffe
+|Begriff | Beschreibung|
+|------------|------------|
+|Arbeitsverzeichnis (Working Directory)			|Dies ist der Bereich, in dem du deine Dateien tatsächlich bearbeitest. Es zeigt den aktuellen Stand der Dateien auf meinem Dateisystem.|
+|Staging-Bereich (Index)			|Dies ist ein Bereich, in dem du Änderungen vorbereitest, bevor sie in einem Commit gespeichert werden. Wenn du git add ausführst, verschiebst du Änderungen von deinem Arbeitsverzeichnis in den Staging-Bereich.|
+
+### Bash commands
+|Bash command | Beschreibung|
 |-------------|------------|
 |pwd					|aktueller Directory|
 |cd "C:\Users\Critex\Documents\"	|Directory ändern|
@@ -10,7 +17,7 @@
 |ssh -T git@gitlab.com		|Überprüfung einer SSH-Verbindung auf ein gitlab repo|
 
 ### Git Basic commands
-|git command | Description|
+|git command | Beschreibung|
 |------------|------------|
 |git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen (global über alle Projekte)|
 |git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen (global über alle Projekte)|
@@ -23,8 +30,6 @@
 |git add docs/\*.txt			|added alle txt-files im "docs" Ordner|
 |git add docs/						|added alle files im "docs" Ordner|
 |git add -u			|added alle deleted files|
-|git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
-|git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle Änderungen)|
 |git clean -n	-f	|Zeigt an welche Files gelöscht werden würden, wenn man "git clean -f" benutzt|
 |git clean -f		|⚠️ löscht alle untracked files|
 |git clean -d -f	|⚠️ löscht alle untracked files in allen Subfolders|
@@ -67,9 +72,13 @@
 |git cherry-pick d42c389f	|Es wird der Commit "d42c389f" eines anderen Branchs in den aktuellen Branch eingefügt. Alle Änderungen aus früheren Commits werden **nicht** übernommen.|
 
 ### Git commands für fixes
-|git command | Description|
+|git command | Beschreibung|
 |------------|------------|
 |git commit --amend				|Öffnet ein Editor um den Commit zu editieren|
+|git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
+|git reset --soft		|Der Head wird auf den aktuellen Commit geschoben. Files landen somit wieder im Staging-Area und können sofort comitted werden|
+|git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle Änderungen)|
+|git reset --mixed		|Ist dasselbe wie wenn man nichts|
 
 ### Git Command Referenzen:
 https://git-scm.com/docs
