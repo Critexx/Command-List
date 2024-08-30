@@ -9,6 +9,7 @@
 |ssh-keygen -t rsa -C "your.email@example.com" -b 4096					|erstellt einen neuen SSH Key nach rsa Verfahren und 4096 bit Länge|
 |ssh -T git@gitlab.com		|Überprüfung einer SSH-Verbindung auf ein gitlab repo|
 
+### Git Basic commands
 |git command | Description|
 |------------|------------|
 |git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen (global über alle Projekte)|
@@ -64,6 +65,11 @@
 |git stash pop	|Holt den letzten Änderungen aus dem "Lager" heraus und löscht den Eintrag aus der Stash List|
 |git stash clear	|Löscht alle Stash-Einträge|
 |git cherry-pick d42c389f	|Es wird der Commit "d42c389f" eines anderen Branchs in den aktuellen Branch eingefügt. Alle Änderungen aus früheren Commits werden **nicht** übernommen.|
+
+### Git commands für fixes
+|git command | Description|
+|------------|------------|
+|git commit --amend				|Öffnet ein Editor um den Commit zu editieren|
 
 ### Git Command Referenzen:
 https://git-scm.com/docs
