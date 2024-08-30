@@ -56,6 +56,7 @@
 |git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
 |git tag				|zeigt alle vorhandenen Tags|
 |git log --graph	|Visualisiert den Branchverlauf|
+|git log --oneline --graph	|oneline bewirkt, dass pro Log-Eintrag nur eine Row geschrieben wird|
 |git --version	|Zeigt die aktuelle Git-Version an|
 |git stash	|Versetzt die aktuellen Änderungen in ein "Lager", um an einem anderen Zeitpunkt daran weiter zu arbeiten|
 |git stash list	|Zeigt alle "Stashes" an|
