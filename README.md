@@ -76,7 +76,7 @@
 |------------|------------|
 |git commit --amend				|Öffnet ein Editor um den Commit zu editieren|
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
-|git reset --soft		|* Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit. * dsdf|
+|git reset --soft HEAD~1		|* Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit. * dsdf|
 |git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle Änderungen)|
 
 **git reset --soft:**
