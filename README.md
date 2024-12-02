@@ -63,6 +63,7 @@
 |git tag				|zeigt alle vorhandenen Tags|
 |git log --graph	|Visualisiert den Branchverlauf|
 |git log --oneline --graph	|oneline bewirkt, dass pro Log-Eintrag nur eine Row geschrieben wird|
+|git log --oneline branchA..branchB	|Zeigt alle Commits, die in branchB vorhanden sind, aber nicht in branchA.<br/>branchA: Der Branch, in den du die Commits cherry-picken möchtest.<br/>branchB: Der Branch, aus dem du cherry-picken willst.|
 |git --version	|Zeigt die aktuelle Git-Version an|
 |git stash	|Versetzt die aktuellen Änderungen in ein "Lager", um an einem anderen Zeitpunkt daran weiter zu arbeiten|
 |git stash list	|Zeigt alle "Stashes" an|
