@@ -140,3 +140,38 @@ Bei folgender Message: "Please enter a commit message to explain why this merge 
 * git commit -m ""
 * git checkout "oldbranch"
 * git stash apply
+
+***
+### Mein letzter Commit wurde in ein Feature branch gepusht und muss rückgängig gemacht werden:
+Um den zuletzt gepushten Commit in Git rückgängig zu machen, gibt es grundsätzlich zwei gängige Vorgehensweisen. Welche Methode geeignet ist, hängt davon ab, ob du den Verlauf umschreiben möchtest (was beim Zusammenarbeiten mit anderen oft problematisch sein kann) oder ob du durch einen neuen Commit einfach die Änderungen rückgängig machen möchtest.
+#### 1) Standardmethode mit git revert (empfohlen)
+Mit git revert erzeugst du einen neuen Commit, der die Änderungen eines bestimmten Commits rückgängig macht, ohne den Verlauf umzuschreiben. Dadurch vermeidest du Konflikte, wenn andere bereits den (falschen) Commit gepullt haben.
+```
+# falls du explizit den allerletzten Commit revertest
+git revert HEAD
+
+# oder bei einem bestimmten Commit:
+git revert <commit-hash>
+```
+Nun öffnet sich dein Standard-Editor, in dem du die Commit-Message anpassen kannst (optional).
+
+Revert-Commit abschließen und pushen:
+```
+git push
+```
+
+#### 2) Commit aus der History entfernen (Rewrite mit git reset --hard + Force-Push)
+Wenn wirklich nötig (z. B. du hast versehentlich Zugangsdaten veröffentlicht o. Ä.) und du bist sicher, dass niemand den falschen Commit weiter verwendet hat, kannst du den letzten Commit aus der History entfernen. Hierbei musst du jedoch bedenken, dass du die Repository-Historie „umschreibst“. Das kann zu Problemen führen, wenn andere Entwickler denselben Stand schon gepullt haben.
+
+Zurückspringen um einen Commit (lokal):
+```
+git reset --hard HEAD~1
+```
+
+Erzwungener Push (Achtung!):
+```
+git push --force
+```
+Damit überschreibst du den Remote-Stand. Jeder, der in der Zwischenzeit von diesem Repository gepullt hat, wird Konflikte bekommen, da sich der Commit-Verlauf geändert hat.
+
+**Nicht empfohlen**, wenn ihr in einem Team arbeitet oder ein offizielles Repository habt, das andere schon nutzen. Dann lieber Methode 1 (mit git revert) verwenden.
