@@ -78,9 +78,27 @@
 |git commit --amend				|Öffnet ein Editor um den Commit zu editieren|
 |git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
 |git reset --soft HEAD~1		|* Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit. * dsdf|
-|git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle Änderungen)|
+|git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle getrackten Änderungen)|
+|git clean --fdx		|⚠️ Im Working Tree bleibt nur noch das übrig, was im Repository getrackt ist. Löscht auch Folder (-d) und Dateien aus .gitignore (-x)|
 
-**git reset --soft:**
+### Projekt komplett "auf Werkseinstellungen" zurücksetzen
+
+* git reset --hard
+* git clean -fdx
+
+**git clean**
+Entfernt Dateien/Ordner aus dem Arbeitsverzeichnis, die nicht von Git getrackt werden.
+
+**-f (force)**
+Zwingend nötig – ohne -f macht Git aus Sicherheitsgründen nichts.
+
+**-d (directories)**
+Löscht auch Verzeichnisse, nicht nur einzelne Dateien.
+
+**-x (exclude ignorierte Dateien NICHT)**
+Löscht auch Dateien aus .gitignore (z. B. node_modules/, dist/, .env, Build-Artefakte).|
+
+### git reset --soft:
 * Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit.
 * **Was passiert**: Die Änderungen bleiben im Staging-Bereich und im Arbeitsverzeichnis unverändert. Du kannst die Änderungen sofort erneut committen, da sie noch im Staging-Bereich sind.
 * **Verwendung**: Nützlich, wenn du einen Commit rückgängig machen möchtest, aber die Änderungen nicht verlieren willst. Du kannst sie bearbeiten und erneut committen.
