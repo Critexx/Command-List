@@ -16,8 +16,16 @@
 |ssh-keygen -t rsa -C "your.email@example.com" -b 4096					|erstellt einen neuen SSH Key nach rsa Verfahren und 4096 bit Länge|
 |ssh -T git@gitlab.com		|Überprüfung einer SSH-Verbindung auf ein gitlab repo|
 
+### Git configuration
+Sehr viele Devs haben genau dieses Setup:
+|Configuration | git command| Beschreibung |
+|------------|------------|------------|
+|pull.rebase = true				|git config --global pull.rebase true      |Führt bei git pull automatisch ein Rebase statt Merge aus. Dadurch bleibt die Commit-Historie linear und es entstehen keine unnötigen Merge-Commits.|
+|rebase.autoStash = true  |git config --global rebase.autoStash true |Wenn beim Rebase lokale (auch gestagte) Änderungen vorhanden sind, werden diese automatisch zwischengespeichert (stash), der Rebase ausgeführt und danach wiederhergestellt. Verhindert Fehler wie "cannot rebase: you have unstaged changes".|
+|fetch.prune = true				|git config --global fetch.prune true      |Entfernt lokale Referenzen auf Remote-Branches, die auf dem Server bereits gelöscht wurden. Hält die Remote-Branch-Liste sauber.|
+
 ### Git Basic commands
-|git command | Beschreibung|
+|git config | Beschreibung|
 |------------|------------|
 |git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen (global über alle Projekte)|
 |git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen (global über alle Projekte)|
