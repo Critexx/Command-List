@@ -25,69 +25,75 @@ Sehr viele Devs haben genau dieses Setup:
 |fetch.prune = true				|git config --global fetch.prune true      |Entfernt lokale Referenzen auf Remote-Branches, die auf dem Server bereits gelöscht wurden. Hält die Remote-Branch-Liste sauber.|
 
 ### Git Basic commands
-|git config | Beschreibung|
-|------------|------------|
-|git config --global user.name "Pascal Schaffner"				|Name des Benutzers einstellen (global über alle Projekte)|
-|git config --global user.email "pschaffner@foo.com"		|E-Mail des Benutzers einstellen (global über alle Projekte)|
-|git config --global --list		|Listet alle Global Konfigurationen auf|
-|git config --list		|Listet alle Konfigurationen innerhalb eines Projekts auf. Wenn man für ein bestimmtes Projekt einen andere email verwenden möchte, kann man den oberen Befehl ohne "--global" verwenden|
-|git init				|initialisiert ein lokales Repository. Erzeugt .git Datei|
-|git status				|zeigt aktuellen Status an|
-|git add [dateiname]			|added eine veränderte oder neue Datei|
-|git add --all oder * oder .			|added alle veränderten oder neuen Dateien|
-|git add docs/\*.txt			|added alle txt-files im "docs" Ordner|
-|git add docs/						|added alle files im "docs" Ordner|
-|git add -u			|added alle deleted files|
-|git clean -n	-f	|Zeigt an welche Files gelöscht werden würden, wenn man "git clean -f" benutzt|
-|git clean -f		|⚠️ löscht alle untracked files|
-|git clean -d -f	|⚠️ löscht alle untracked files in allen Subfolders|
-|git checkout -- \*		|setzt den Branch wieder zurück auf den letzten Commit|
-|git rm "\*.txt"		|removed alle txt-files auf der harddisk, sowie im stage|
-|git commit -m "commit nachricht"	|commit erzeugen|
-|git branch                             |zeigt alle branches an|
-|git branch -r                          |zeigt alle remote branches an|
-|git branch featureFoo                  |Erstellt ein branch mit dem Namen "featureFoo"|
-|git branch -d featureFoo                  |⚠️Löscht den branch "featureFoo"|
-|git push origin --delete featureFoo       |⚠️Löscht den branch "featureFoo" auf dem remote repository|
-|git fetch                             |Ladet alle Objects und Refs von den remote repositorys herunter|
-|git fetch origin                            |Ladet alle Objects und Refs vom "origin"-repository herunter|
-|git checkout -t origin/branch-name         |Holt den Branch aus dem remote repository. Hierfür muss aber zuerst git fetch ausgeührt werden.|
-|git checkout featureFoo                |Wechselt den Zeiger (Kopf bzw HEAD) auf den Branch "featureFoo"|
-|git checkout -b BranchFoo          |Shorthand für:<br/>git branch BranchFoo  <br/>git checkout BranchFoo|
-|git merge featureFoo                |Dieser Befehl wirkt sich immer auf den Branch aus, auf dem man den HEAD hat. Wenn mann auf den Master sitzt und diesen Befehl ausführt, wird alles was im featureFoo ist, ins Master gemerged|
-|git clone "addresse"			|Holt eine Kopie des Repositorys|
-|git log				|Zeigt alle commits|
-|git remote add origin [github addresse]|verbindet das lokale repository mit gibhub. Im Prinzip ist das nichts anderes als ein Link-Bookmark|
-|git remote -v  |Zeigt alle remote repositories an|
-|git remote update  |Holt alle remote branches auf das Local system|
-|git remote rm originFoo  |Löscht den remote Eintrag "originFoo"|
-|git push -u origin master		|origin ist der remote name und master der branch name|
-|git push		|wenn man einmal den befehl mit -u gemacht hat, merkt sich git die Einstellung und es reicht "git push" einzugeben|
-|git pull origin master |Ladet die neuste Version herunter und merged sie automatisch mit dem lokalen Projekt|
-|git tag -a v1.0 -m "first version"	|erzeugt ein versions Tags|
-|git push origin v1.0 |pusht den Tag zum Server|
-|git diff HEAD |zeigt Änderung der letzten commits an (HEAD ist die Referenz der letzten Änderung auf der Time-Line, in der man sich befindet|
-|git diff --staged |zeigt Änderung der letzten stage an (was man ge'added hat)|
-|git tag				|zeigt alle vorhandenen Tags|
-|git log --graph	|Visualisiert den Branchverlauf|
-|git log --oneline --graph	|oneline bewirkt, dass pro Log-Eintrag nur eine Row geschrieben wird|
-|git log --oneline branchA..branchB	|Zeigt alle Commits, die in branchB vorhanden sind, aber nicht in branchA.<br/>branchA: Der Branch, in den du die Commits cherry-picken möchtest.<br/>branchB: Der Branch, aus dem du cherry-picken willst.|
-|git --version	|Zeigt die aktuelle Git-Version an|
-|git stash	|Versetzt die aktuellen Änderungen in ein "Lager", um an einem anderen Zeitpunkt daran weiter zu arbeiten|
-|git stash list	|Zeigt alle "Stashes" an|
-|git stash apply	|Holt den letzten Änderungen aus dem "Lager" heraus|
-|git stash pop	|Holt den letzten Änderungen aus dem "Lager" heraus und löscht den Eintrag aus der Stash List|
-|git stash clear	|Löscht alle Stash-Einträge|
-|git cherry-pick d42c389f	|Es wird der Commit "d42c389f" eines anderen Branchs in den aktuellen Branch eingefügt. Alle Änderungen aus früheren Commits werden **nicht** übernommen.|
 
-### Git commands für fixes
-|git command | Beschreibung|
-|------------|------------|
-|git commit --amend				|Öffnet ein Editor um den Commit zu editieren|
-|git reset [HEAD] [dateiname]		|macht "add" wieder rückgänging|
-|git reset --soft HEAD~1		|* Dieser Befehl verschiebt den HEAD (den Zeiger auf den aktuellen Commit) und den aktuellen Branch auf den angegebenen Commit. * dsdf|
-|git reset --hard		|⚠️ setzt den aktuellen branch wieder auf den letzten commit (Achtung, löscht alle getrackten Änderungen)|
-|git clean --fdx		|⚠️ Im Working Tree bleibt nur noch das übrig, was im Repository getrackt ist. Löscht auch Folder (-d) und Dateien aus .gitignore (-x)|
+| Befehl | Beschreibung |
+|---|---|
+| `git config --global user.name "<name>"` | Name des Benutzers einstellen (global über alle Projekte) |
+| `git config --global user.email "<email>"` | E-Mail des Benutzers einstellen (global über alle Projekte) |
+| `git config --global --list` | Listet alle globalen Konfigurationen auf |
+| `git config --list` | Listet alle Konfigurationen auf, die im aktuellen Projekt gelten. Soll ein Projekt eine andere E-Mail verwenden, setzt man sie dort mit dem Befehl oben ohne `--global` |
+| `git --version` | Zeigt die aktuelle Git-Version an |
+| `git init` | Initialisiert ein lokales Repository. Erzeugt den Ordner `.git` |
+| `git clone <url>` | Holt eine Kopie des Repositorys in einen Ordner mit dem Namen des Repos |
+| `git clone <url> <ordner>` | Klont in einen Ordner mit eigenem Namen (relativ oder absolut) |
+| `git clone <url> .` | Klont in den aktuellen Ordner (dieser muss leer sein) |
+| `git status` | Zeigt den aktuellen Status an |
+| `git add <datei>` | Staged eine veränderte oder neue Datei |
+| `git add --all` | Staged alle Änderungen im ganzen Repo: neue, veränderte und gelöschte Dateien |
+| `git add .` | Staged alle Änderungen im aktuellen Ordner und darunter |
+| `git add docs/*.txt` | Staged alle txt-Dateien im Ordner `docs` |
+| `git add docs/` | Staged alle Dateien im Ordner `docs` |
+| `git add -u` | Staged nur Änderungen und Löschungen von bereits getrackten Dateien, keine neuen Dateien |
+| `git commit -m "<nachricht>"` | Erzeugt einen Commit |
+| `git rm "*.txt"` | Löscht alle txt-Dateien auf der Festplatte und im Stage |
+| `git clean -n` | Zeigt an, welche Dateien `git clean -f` löschen würde (Probelauf) |
+| `git clean -f` | ⚠️ Löscht alle untracked Dateien |
+| `git clean -fd` | ⚠️ Löscht alle untracked Dateien und zusätzlich untracked Ordner |
+| `git checkout -- .` | ⚠️ Verwirft alle nicht gestagten Änderungen an getrackten Dateien (neuer: `git restore .`) |
+| `git branch` | Zeigt alle lokalen Branches an |
+| `git branch -r` | Zeigt alle Remote-Branches an |
+| `git branch <branch>` | Erstellt einen Branch mit dem Namen `<branch>` |
+| `git branch -d <branch>` | ⚠️ Löscht den lokalen Branch `<branch>` |
+| `git push origin --delete <branch>` | ⚠️ Löscht den Branch `<branch>` auf dem Remote-Repository |
+| `git checkout <branch>` | Wechselt den Zeiger (HEAD) auf den Branch `<branch>` (neuer: `git switch <branch>`) |
+| `git checkout -b <branch>` | Kurzform für:<br/>`git branch <branch>`<br/>`git checkout <branch>` |
+| `git checkout -t origin/<branch>` | Holt den Branch aus dem Remote-Repository als lokalen Branch. Vorher muss `git fetch` ausgeführt werden |
+| `git merge <branch>` | Merged `<branch>` in den Branch, auf dem HEAD steht. Steht man auf `main`, wird alles aus `<branch>` in `main` gemerged |
+| `git cherry-pick <commit>` | Fügt den Commit `<commit>` eines anderen Branches in den aktuellen Branch ein. Änderungen aus früheren Commits werden **nicht** übernommen |
+| `git remote add origin <url>` | Verbindet das lokale Repository mit einem Remote-Repository. Im Prinzip ist das nur ein Lesezeichen auf die URL |
+| `git remote -v` | Zeigt alle Remote-Repositories an |
+| `git remote rm <remote>` | Löscht den Remote-Eintrag `<remote>` |
+| `git fetch` | Lädt alle Objekte und Refs vom Remote-Repository herunter, ohne lokal etwas zu mergen |
+| `git fetch <remote>` | Lädt alle Objekte und Refs vom Remote `<remote>` herunter, z. B. `origin` |
+| `git remote update` | Führt `git fetch` für alle Remotes aus. Lokale Branches werden dabei nicht angelegt |
+| `git pull origin <branch>` | Lädt die neuste Version herunter und merged sie automatisch in den lokalen Branch |
+| `git push -u origin <branch>` | Pusht den Branch und merkt sich `origin/<branch>` als Upstream. `origin` ist der Remote-Name |
+| `git push` | Nach einmal `push -u` merkt sich Git den Upstream, danach reicht `git push` |
+| `git tag` | Zeigt alle vorhandenen Tags an |
+| `git tag -a <tag> -m "<nachricht>"` | Erzeugt einen Versions-Tag, z. B. `v1.0` |
+| `git push origin <tag>` | Pusht den Tag zum Server |
+| `git log` | Zeigt alle Commits an |
+| `git log --graph` | Visualisiert den Branch-Verlauf |
+| `git log --oneline --graph` | Wie oben, aber pro Commit nur eine Zeile |
+| `git log --oneline <branchA>..<branchB>` | Zeigt alle Commits, die in `<branchB>` sind, aber nicht in `<branchA>`.<br/>`<branchA>`: Branch, in den du cherry-picken willst.<br/>`<branchB>`: Branch, aus dem du cherry-picken willst. |
+| `git diff` | Zeigt die nicht gestagten Änderungen an |
+| `git diff --staged` | Zeigt die gestagten Änderungen an (was man mit `add` hinzugefügt hat) |
+| `git diff HEAD` | Zeigt alle Änderungen seit dem letzten Commit an, gestagt und nicht gestagt |
+| `git stash` | Legt die aktuellen Änderungen in ein «Lager», um später daran weiterzuarbeiten |
+| `git stash list` | Zeigt alle Stashes an |
+| `git stash apply` | Holt die letzten Änderungen aus dem «Lager» zurück. Der Eintrag bleibt in der Stash-Liste |
+| `git stash pop` | Holt die letzten Änderungen aus dem «Lager» zurück und löscht den Eintrag aus der Stash-Liste |
+| `git stash clear` | ⚠️ Löscht alle Stash-Einträge |
+
+### Git commands für Fixes
+
+| Befehl | Beschreibung |
+|---|---|
+| `git commit --amend` | Öffnet einen Editor, um den letzten Commit zu bearbeiten |
+| `git reset <datei>` | Macht `add` für die Datei rückgängig. Die Änderung bleibt in der Datei (neuer: `git restore --staged <datei>`) |
+| `git reset --soft HEAD~1` | Macht den letzten Commit rückgängig. Die Änderungen bleiben gestagt |
+| `git reset --hard` | ⚠️ Setzt den aktuellen Branch auf den letzten Commit zurück. Löscht alle Änderungen an getrackten Dateien, gestagt und nicht gestagt |
+| `git clean -fdx` | ⚠️ Im Working Tree bleibt nur, was im Repository getrackt ist. Löscht auch untracked Ordner (`-d`) und Dateien aus `.gitignore` (`-x`) |
 
 ### Projekt komplett "auf Werkseinstellungen" zurücksetzen
 
